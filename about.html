@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 혁신의 시작</title>
+    <meta name="description" content="AI 기술의 무한한 가능성을 믿고, 혁신적인 솔루션을 제공하는 ai-minton을 소개합니다.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section class="services" style="padding-top: 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh;">
+            <div class="container">
+                <div class="page-nav" style="margin-top: 0; margin-bottom: 2rem;">
+                    <a href="index.html">홈</a>
+                    <a href="services.html">서비스</a>
+                    <a href="about.html" class="active">회사</a>
+                    <a href="contact.html">연락처</a>
+                </div>
+                <h1 class="section-title" style="margin-bottom: 2rem; color: white;">비전 + 가치 + 기술 = 새로운 미래</h1>
+                <div class="services-grid">
+                    <div class="service-card about-vision-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <h3>우리의 비전</h3>
+                                <ul class="service-features" style="list-style: none; padding: 0; text-align: center;">
+                                    <li>AI 기술의 무한한 가능성</li>
+                                    <li>세상을 더 나은 곳으로</li>
+                                    <li>혁신적인 솔루션 제공</li>
+                                    <li>고객 비즈니스 성장 지원</li>
+                                </ul>
+                            </div>
+                            <div class="card-back">
+                                <a href="#" class="service-link" onclick="showDetails('vision')">자세히 보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card about-values-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <h3>핵심 가치</h3>
+                                <ul class="service-features" style="list-style: none; padding: 0; text-align: center;">
+                                    <li>혁신 - 최신 AI 기술 선도</li>
+                                    <li>신뢰 - 투명한 서비스</li>
+                                    <li>성장 - 지속가능한 가치</li>
+                                    <li>협력 - 최고의 팀워크</li>
+                                </ul>
+                            </div>
+                            <div class="card-back">
+                                <a href="#" class="service-link" onclick="showDetails('values')">자세히 보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card about-tech-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <h3>기술 스택</h3>
+                                <ul class="service-features" style="list-style: none; padding: 0; text-align: center;">
+                                    <li>Python, TensorFlow</li>
+                                    <li>PyTorch, OpenAI</li>
+                                    <li>AWS, Azure 클라우드</li>
+                                    <li>Docker, Kubernetes</li>
+                                </ul>
+                            </div>
+                            <div class="card-back">
+                                <a href="#" class="service-link" onclick="showDetails('tech')">자세히 보기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 상세 내용 섹션 -->
+                <div id="details-section" class="details-section" style="display: none;">
+                    <div class="details-content">
+                        <button class="close-details" onclick="hideDetails()">×</button>
+                        <div id="details-text"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function showDetails(type) {
+            const detailsSection = document.getElementById('details-section');
+            const detailsText = document.getElementById('details-text');
+            
+            let content = '';
+            
+            switch(type) {
+                case 'vision':
+                    content = `
+                        <h2>우리의 비전</h2>
+                        <p>ai-minton은 AI 기술의 무한한 가능성을 현실로 만들어 세상을 더 나은 곳으로 변화시키고자 합니다.</p>
+                        
+                        <div class="vision-details">
+                            <div class="vision-item">
+                                <h3>🚀 AI 기술의 무한한 가능성</h3>
+                                <p>인공지능은 단순한 자동화를 넘어 창의적 문제 해결, 예측 분석, 개인화된 서비스 등 
+                                무궁무진한 영역에서 혁신을 이끌어낼 수 있습니다. 우리는 이러한 AI의 잠재력을 최대한 발휘하여 
+                                이전에는 불가능했던 솔루션들을 현실화합니다.</p>
+                            </div>
+                            
+                            <div class="vision-item">
+                                <h3>🌍 세상을 더 나은 곳으로</h3>
+                                <p>기술 발전이 단순히 효율성 향상에 그치지 않고, 사회 전체의 삶의 질 향상과 
+                                지속가능한 발전에 기여할 수 있도록 합니다. AI를 통해 환경 문제 해결, 의료 서비스 개선, 
+                                교육 기회 확대 등 사회적 가치를 창출합니다.</p>
+                            </div>
+                            
+                            <div class="vision-item">
+                                <h3>💡 혁신적인 솔루션 제공</h3>
+                                <p>기존의 틀을 벗어난 창의적이고 혁신적인 AI 솔루션을 개발합니다. 
+                                단순한 기술 구현을 넘어서 고객의 비즈니스 모델 자체를 혁신할 수 있는 
+                                게임 체인저 역할을 하는 솔루션을 제공합니다.</p>
+                            </div>
+                            
+                            <div class="vision-item">
+                                <h3>📈 고객 비즈니스 성장 지원</h3>
+                                <p>고객의 성공이 곧 우리의 성공입니다. 단순한 기술 공급을 넘어서 
+                                고객의 비즈니스 목표 달성과 지속적인 성장을 위한 전략적 파트너로서 
+                                함께 성장해 나갑니다.</p>
+                            </div>
+                        </div>
+                    `;
+                    break;
+                case 'values':
+                    content = `
+                        <h2>핵심 가치</h2>
+                        <p>ai-minton의 모든 활동과 의사결정의 기반이 되는 4가지 핵심 가치입니다.</p>
+                        
+                        <div class="values-details">
+                            <div class="value-item">
+                                <h3>🚀 혁신 - 최신 AI 기술 선도</h3>
+                                <p>끊임없는 연구개발을 통해 차세대 AI 기술을 선도합니다. 
+                                현상에 안주하지 않고 새로운 가능성을 탐구하며, 업계 표준을 만들어가는 혁신적인 솔루션을 개발합니다.</p>
+                            </div>
+                            
+                            <div class="value-item">
+                                <h3>🤝 신뢰 - 투명한 서비스</h3>
+                                <p>투명한 소통과 정직한 서비스로 고객과의 깊은 신뢰 관계를 구축합니다. 
+                                프로젝트 진행 상황을 실시간으로 공유하고, 약속한 것은 반드시 지킵니다.</p>
+                            </div>
+                            
+                            <div class="value-item">
+                                <h3>📈 성장 - 지속가능한 가치</h3>
+                                <p>고객, 직원, 회사 모두가 함께 성장하는 생태계를 만듭니다. 
+                                단기적 이익보다는 장기적 파트너십을 통해 지속가능한 가치를 창출합니다.</p>
+                            </div>
+                            
+                            <div class="value-item">
+                                <h3>🤝 협력 - 최고의 팀워크</h3>
+                                <p>다양한 관점과 전문성을 가진 팀원들이 협력하여 시너지를 창출합니다. 
+                                개방적인 소통 문화와 상호 존중을 바탕으로 1+1이 3이 되는 결과를 만들어냅니다.</p>
+                            </div>
+                        </div>
+                    `;
+                    break;
+                case 'tech':
+                    content = `
+                        <h2>기술 스택</h2>
+                        <p>확장 가능하고 안정적인 AI 솔루션 구축을 위한 핵심 기술들입니다.</p>
+                        
+                        <div class="tech-details">
+                            <div class="tech-item">
+                                <h3>🐍 Python, TensorFlow</h3>
+                                <p>AI 개발의 핵심 언어인 Python과 구글의 머신러닝 플랫폼 TensorFlow를 활용하여 
+                                대규모 딥러닝 모델을 학습하고 배포합니다. 풍부한 생태계와 직관적 문법으로 빠른 개발이 가능합니다.</p>
+                            </div>
+                            
+                            <div class="tech-item">
+                                <h3>🔥 PyTorch, OpenAI</h3>
+                                <p>연구 친화적인 PyTorch와 최신 생성형 AI인 OpenAI API를 통해 
+                                혁신적인 AI 솔루션을 개발합니다. 동적 계산 그래프와 최신 모델로 창의적 문제 해결이 가능합니다.</p>
+                            </div>
+                            
+                            <div class="tech-item">
+                                <h3>☁️ AWS, Azure 클라우드</h3>
+                                <p>전 세계 최대 규모의 클라우드 인프라를 활용하여 높은 안정성과 확장성을 보장합니다. 
+                                AI/ML 전용 서비스들로 효율적인 개발과 운영이 가능합니다.</p>
+                            </div>
+                            
+                            <div class="tech-item">
+                                <h3>🔧 Docker, Kubernetes</h3>
+                                <p>컨테이너화 기술로 일관된 개발 환경을 제공하고, 
+                                오케스트레이션을 통해 자동 스케일링과 무중단 배포를 실현합니다.</p>
+                            </div>
+                        </div>
+                    `;
+                    break;
+            }
+            
+            detailsText.innerHTML = content;
+            detailsSection.style.display = 'block';
+            
+            // 스크롤을 상세 섹션으로 이동 (약간 위쪽으로)
+            setTimeout(() => {
+                detailsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+        }
+        
+        function hideDetails() {
+            const detailsSection = document.getElementById('details-section');
+            detailsSection.style.display = 'none';
+            
+            // 카드 섹션으로 스크롤 이동
+            document.querySelector('.services').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

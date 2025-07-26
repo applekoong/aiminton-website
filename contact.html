@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 혁신의 시작</title>
+    <meta name="description" content="AI 솔루션에 대한 문의사항이 있으시면 언제든 연락해주세요.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section class="services" style="padding-top: 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh;">
+            <div class="container">
+                <div class="page-nav" style="margin-top: 0; margin-bottom: 2rem;">
+                    <a href="index.html">홈</a>
+                    <a href="services.html">서비스</a>
+                    <a href="about.html">회사</a>
+                    <a href="contact.html" class="active">연락처</a>
+                </div>
+                <h1 class="section-title" style="margin-bottom: 2rem; color: white;">환영합니다. 어서오세요!</h1>
+                <div class="services-grid">
+                    <div class="service-card contact-email-card">
+                        <h3>이메일 문의</h3>
+                        <ul class="service-features" style="list-style: none; padding: 0; text-align: center;">
+                            <li>kjh@aiminton.co.kr</li>
+                        </ul>
+                        <button type="button" onclick="document.getElementById('map-section').style.display='none'; document.getElementById('email-form-section').style.display='block'; setTimeout(function(){document.getElementById('email-form-section').scrollIntoView({behavior:'smooth'});}, 100);" style="background: none; border: none; cursor: pointer; color: white; font-size: 1rem; text-decoration: underline; padding: 0.5rem 1rem; z-index: 999; position: relative;">이메일 보내기</button>
+                    </div>
+                    
+                    <div class="service-card contact-phone-card">
+                        <h3>전화 상담</h3>
+                        <ul class="service-features" style="list-style: none; padding: 0; text-align: center;">
+                            <li>010-6730-8829</li>
+                            <li>평일 09:00 - 18:00</li>
+                        </ul>
+                        <button type="button" onclick="window.location.href='tel:010-6730-8829';" style="background: none; border: none; cursor: pointer; color: white; font-size: 1rem; text-decoration: underline; padding: 0.5rem 1rem; z-index: 999; position: relative;">전화걸기</button>
+                    </div>
+                    
+                    <div class="service-card contact-location-card">
+                        <h3>오시는 길</h3>
+                        <ul class="service-features" style="list-style: none; padding: 0; text-align: center;">
+                            <li>경기도 성남시 수정구</li>
+                            <li>창업로 43 업무동 1층 60호</li>
+                        </ul>
+                        <button type="button" onclick="document.getElementById('email-form-section').style.display='none'; document.getElementById('map-section').style.display='block'; setTimeout(function(){document.getElementById('map-section').scrollIntoView({behavior:'smooth'});}, 100);" style="background: none; border: none; cursor: pointer; color: white; font-size: 1rem; text-decoration: underline; padding: 0.5rem 1rem; z-index: 999; position: relative;">위치 보기</button>
+                    </div>
+                </div>
+                
+                <!-- 지도 섹션 -->
+                <div id="map-section" class="map-section" style="display: none;">
+                    <div class="map-content">
+                        <button class="close-map" onclick="document.getElementById('map-section').style.display='none';">×</button>
+                        <h2>오시는 길</h2>
+                        <div class="map-container">
+                            <iframe 
+                                src="https://maps.google.com/maps?q=경기도 성남시 수정구 창업로 43&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                                width="100%" 
+                                height="400" 
+                                style="border:0; border-radius: 10px;" 
+                                allowfullscreen="" 
+                                loading="lazy">
+                            </iframe>
+                            <div class="address-info">
+                                <h3>주소</h3>
+                                <p>경기도 성남시 수정구 창업로 43 업무동 1층 60호</p>
+                                <button type="button" onclick="navigator.clipboard.writeText('경기도 성남시 수정구 창업로 43 업무동 1층 60호').then(function(){alert('주소가 복사되었습니다.');});" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 0.5rem 1rem; border-radius: 20px; cursor: pointer; margin-top: 0.5rem;">주소 복사</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 이메일 폼 섹션 -->
+                <div id="email-form-section" class="email-form-section" style="display: none;">
+                    <div class="email-form-content">
+                        <button class="close-email-form" onclick="document.getElementById('email-form-section').style.display='none';">×</button>
+                        <h2>이메일 보내기</h2>
+                        <form class="contact-form" onsubmit="sendEmail(event)">
+                            <div class="form-group">
+                                <label for="sender-name">이름 *</label>
+                                <input type="text" id="sender-name" name="name" required placeholder="성함을 입력해주세요">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="sender-email">이메일 *</label>
+                                <input type="email" id="sender-email" name="email" required placeholder="회신받을 이메일 주소">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="sender-phone">연락처</label>
+                                <input type="tel" id="sender-phone" name="phone" placeholder="연락 가능한 전화번호 (선택사항)">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company">회사명</label>
+                                <input type="text" id="company" name="company" placeholder="소속 회사명 (선택사항)">
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="subject">제목 *</label>
+                                <input type="text" id="subject" name="subject" required placeholder="문의 제목을 입력해주세요">
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="message">문의 내용 *</label>
+                                <textarea id="message" name="message" required rows="6" placeholder="프로젝트 내용, 예산, 일정 등 자세한 내용을 적어주세요"></textarea>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn-send">이메일 보내기</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function showEmailForm() {
+            alert('클릭됨!');
+            document.getElementById('email-form-section').style.display = 'block';
+        }
+        
+        function hideEmailForm() {
+            document.getElementById('email-form-section').style.display = 'none';
+        }
+        
+        function sendEmail(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const phone = formData.get('phone');
+            const company = formData.get('company');
+            const subject = formData.get('subject');
+            const message = formData.get('message');
+            
+            // 이메일 본문 구성
+            let emailBody = `안녕하세요 ai-minton입니다.
+
+다음과 같은 문의를 받았습니다:
+
+이름: ${name}
+이메일: ${email}`;
+            
+            if (phone) emailBody += `\n연락처: ${phone}`;
+            if (company) emailBody += `\n회사명: ${company}`;
+            
+            emailBody += `\n제목: ${subject}
+
+문의 내용:
+${message}
+
+감사합니다.`;
+            
+            // mailto 링크 생성
+            const mailtoLink = `mailto:kjh@aiminton.co.kr?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+            
+            // 기본 이메일 클라이언트 열기
+            window.location.href = mailtoLink;
+            
+            // 성공 메시지 표시
+            alert('이메일 클라이언트가 열렸습니다. 이메일을 확인하고 전송해주세요.');
+            
+            // 폼 초기화 및 숨기기
+            event.target.reset();
+            hideEmailForm();
+        }
+        
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
