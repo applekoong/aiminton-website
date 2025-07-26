@@ -324,12 +324,32 @@ document.addEventListener('DOMContentLoaded', function() {
         card.addEventListener('mouseenter', function() {
             this.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
             this.style.color = 'white';
+            
+            // Change text color for all text elements
+            const title = this.querySelector('h3');
+            const description = this.querySelector('p');
+            const link = this.querySelector('.service-link');
+            
+            if (title) title.style.color = 'white';
+            if (description) description.style.color = 'rgba(255, 255, 255, 0.9)';
+            if (link) link.style.color = 'white';
+            
             this.querySelector('.service-icon').style.filter = 'brightness(0) invert(1)';
         });
         
         card.addEventListener('mouseleave', function() {
             this.style.background = 'white';
             this.style.color = '';
+            
+            // Reset text colors
+            const title = this.querySelector('h3');
+            const description = this.querySelector('p');
+            const link = this.querySelector('.service-link');
+            
+            if (title) title.style.color = '';
+            if (description) description.style.color = '';
+            if (link) link.style.color = '';
+            
             this.querySelector('.service-icon').style.filter = '';
         });
     });
