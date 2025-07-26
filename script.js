@@ -334,7 +334,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (description) description.style.color = 'rgba(255, 255, 255, 0.9)';
             if (link) link.style.color = 'white';
             
-            this.querySelector('.service-icon').style.filter = 'brightness(0) invert(1)';
+            // SVG color change is handled by CSS
         });
         
         card.addEventListener('mouseleave', function() {
@@ -350,7 +350,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (description) description.style.color = '';
             if (link) link.style.color = '';
             
-            this.querySelector('.service-icon').style.filter = '';
+            // SVG color reset is handled by CSS
         });
     });
 });
