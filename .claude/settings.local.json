@@ -6,7 +6,8 @@
       "Bash(npx http-server:*)",
       "Bash(python3:*)",
       "Bash(open index.html)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(git add:*)"
     ],
     "deny": []
   }
