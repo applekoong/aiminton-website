@@ -308,6 +308,9 @@ body {
     text-align: center;
     transition: all 0.3s ease;
     border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .service-card:hover {
@@ -330,6 +333,23 @@ body {
 .service-card p {
     color: var(--text-secondary);
     line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.service-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.service-link:hover {
+    color: var(--primary-dark);
+    transform: translateX(5px);
 }
 
 /* About Section */
