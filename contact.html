@@ -155,14 +155,20 @@ ${message}
 
 감사합니다.`;
             
-            // mailto 링크 생성
-            const mailtoLink = `mailto:kjh@aiminton.co.kr?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+            // 네이버 메일로 직접 이동
+            const naverMailUrl = `https://mail.naver.com/write/popup?to=applekoong@naver.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
             
-            // 기본 이메일 클라이언트 열기
-            window.location.href = mailtoLink;
+            // 새 창에서 네이버 메일 열기
+            window.open(naverMailUrl, '_blank');
             
-            // 성공 메시지 표시
-            alert('이메일 클라이언트가 열렸습니다. 이메일을 확인하고 전송해주세요.');
+            // 안내 메시지 표시
+            alert('네이버 메일 작성 페이지가 열렸습니다. 로그인 후 이메일을 전송해주세요.\n\n만약 창이 열리지 않았다면, 팝업 차단을 해제해주세요.');
+            
+            // 폼 데이터를 클립보드에 복사
+            const clipboardText = `제목: ${subject}\n\n${emailBody}`;
+            navigator.clipboard.writeText(clipboardText).then(function() {
+                console.log('이메일 내용이 클립보드에 복사되었습니다.');
+            });
             
             // 폼 초기화 및 숨기기
             event.target.reset();
