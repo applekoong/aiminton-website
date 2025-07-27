@@ -8,13 +8,18 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+        html, body {
+            height: 100vh;
             margin: 0;
             padding: 0;
+            overflow: hidden;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             display: flex;
             flex-direction: column;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         nav {
@@ -29,12 +34,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 2rem;
         }
         
         .landing-hero {
             text-align: center;
-            padding: 2rem;
-            margin-top: 40px;
+            margin-top: 20px;
         }
         
         .hero-title {
@@ -45,10 +50,16 @@
             line-height: 1.2;
         }
         
+        .highlight {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
         .hero-description {
             font-size: 1.25rem;
             color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 2.5rem;
             line-height: 1.6;
         }
         
@@ -56,6 +67,23 @@
             padding: 1rem 0;
             text-align: center;
             color: rgba(255, 255, 255, 0.8);
+        }
+        
+        /* 미디어 쿼리 */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-description {
+                font-size: 1.1rem;
+            }
+            
+            nav a {
+                font-size: 0.9rem;
+                padding: 0.4rem 0.8rem !important;
+                margin: 0 0.2rem !important;
+            }
         }
     </style>
 </head>
