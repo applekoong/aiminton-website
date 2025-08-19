@@ -1,4 +1,4 @@
-# AIdea - AI 스타트업 웹사이트
+# aiko - AI KOREA
 
 심플하고 세련된 AI 스타트업 홈페이지입니다.
 
