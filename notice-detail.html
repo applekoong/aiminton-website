@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항 상세 - AI 혁신의 시작</title>
+    <meta name="description" content="AI 스타트업의 공지사항 상세 내용을 확인하세요.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .notice-detail-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .notice-detail-header {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .notice-back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #666;
+            text-decoration: none;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        
+        .notice-back-btn:hover {
+            color: #333;
+        }
+        
+        .notice-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .notice-badge.important {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+        
+        .notice-badge.general {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .notice-detail-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        
+        .notice-detail-meta {
+            display: flex;
+            gap: 1rem;
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .notice-detail-content {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            line-height: 1.8;
+        }
+        
+        .notice-detail-content h3 {
+            color: #333;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .notice-detail-content h3:first-child {
+            margin-top: 0;
+        }
+        
+        .notice-detail-content p {
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+        
+        .notice-detail-content ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        
+        .notice-detail-content li {
+            color: #555;
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .notice-detail-container {
+                padding: 0 1rem;
+            }
+            
+            .notice-detail-header {
+                padding: 1.5rem;
+            }
+            
+            .notice-detail-title {
+                font-size: 1.5rem;
+            }
+            
+            .notice-detail-content {
+                padding: 1.5rem;
+            }
+            
+            .notice-detail-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="services" style="padding-top: 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh;">
+            <div class="container">
+                <div class="page-nav" style="margin-top: 0; margin-bottom: 2rem;">
+                    <a href="index.html">홈</a>
+                    <a href="services.html">서비스</a>
+                    <a href="about.html">회사</a>
+                    <a href="notice.html" class="active">공지사항</a>
+                    <a href="contact.html">연락처</a>
+                </div>
+                
+                <div class="notice-detail-container">
+                    <div class="notice-detail-header">
+                        <a href="notice.html" class="notice-back-btn">
+                            ← 공지사항 목록으로 돌아가기
+                        </a>
+                        
+                        <span class="notice-badge important" id="notice-badge">중요</span>
+                        <h1 class="notice-detail-title" id="notice-title">aiko 법인설립 공고</h1>
+                        
+                        <div class="notice-detail-meta">
+                            <span>작성일: <span id="notice-date">2025.08.21</span></span>
+                            <span>조회수: <span id="notice-views">152</span></span>
+                        </div>
+                    </div>
+                    
+                    <div class="notice-detail-content" id="notice-content">
+                        <div style="text-align: center; margin-bottom: 3rem;">
+                            <h2 style="font-size: 2rem; margin-bottom: 2rem; color: #333;">공    고</h2>
+                        </div>
+                        
+                        <h3 style="text-align: center; margin-bottom: 2rem; color: #333;">설립 공고</h3>
+                        
+                        <p>
+                            당사는 상법 제289조 및 제295조의 규정에 의거<br>
+                            아래와 같이 설립되었음을 공고합니다.
+                        </p>
+                        
+                        <div style="text-align: center; margin: 2rem 0; font-weight: bold;">- 아    래 -</div>
+                        
+                        <div style="line-height: 2; margin-bottom: 1.5rem;">
+                            <p><strong>1. 상    호:</strong> 주식회사 에이코(AIKO)</p>
+                        </div>
+                        
+                        <div style="line-height: 2; margin-bottom: 1.5rem;">
+                            <p><strong>2. 설립일자:</strong> 2025년 8월 21일</p>
+                        </div>
+                        
+                        <div style="line-height: 2; margin-bottom: 1.5rem;">
+                            <p><strong>3. 본    점:</strong> 경기도 성남시 수정구 창업로 43 업무동 1층 60호</p>
+                        </div>
+                        
+                        <div style="line-height: 2; margin-bottom: 1.5rem;">
+                            <p><strong>4. 목    적:</strong></p>
+                            <div style="margin-left: 1rem;">
+                                <p>1) 인공지능 솔루션 개발 및 컨설팅</p>
+                                <p>2) 인공지능 및 프로그래밍 교육</p>
+                                <p>3) 인공지능 기반의 모바일 서비스 구축</p>
+                            </div>
+                        </div>
+                        
+                        <div style="line-height: 2; margin-bottom: 1.5rem;">
+                            <p><strong>5. 자 본 금:</strong> 금 1,000,000원 (일백만원)</p>
+                        </div>
+                        
+                        <div style="line-height: 2; margin-bottom: 1.5rem;">
+                            <p><strong>6. 발행주식:</strong> 보통주 10,000주 (1주당 액면가액 금 100원)</p>
+                        </div>
+                        
+                        <div style="line-height: 2; margin-bottom: 3rem;">
+                            <p><strong>7. 대 표 자:</strong> 김정훈</p>
+                        </div>
+                        
+                        <div style="text-align: center; margin-top: 4rem;">
+                            <p style="margin-bottom: 1rem;"><strong>2025년 8월 21일</strong></p>
+                            <p style="margin-bottom: 0.5rem;"><strong>주식회사 에이코(AIKO)</strong></p>
+                            <p><strong>대표이사  김 정 훈</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // URL 파라미터를 통해 동적으로 내용 변경 가능
+        const urlParams = new URLSearchParams(window.location.search);
+        const noticeId = urlParams.get('id');
+        
+        // 공지사항 데이터 (실제로는 서버에서 가져와야 함)
+        const notices = {
+            '1': {
+                badge: 'important',
+                title: 'aiko 법인설립 공고',
+                date: '2025.08.21',
+                views: '152',
+                content: `
+                    <div style="text-align: center; margin-bottom: 3rem;">
+                        <h2 style="font-size: 2rem; margin-bottom: 2rem; color: #333;">공    고</h2>
+                    </div>
+                    
+                    <h3 style="text-align: center; margin-bottom: 2rem; color: #333;">설립 공고</h3>
+                    
+                    <p>
+                        당사는 상법 제289조 및 제295조의 규정에 의거<br>
+                        아래와 같이 설립되었음을 공고합니다.
+                    </p>
+                    
+                    <div style="text-align: center; margin: 2rem 0; font-weight: bold;">- 아    래 -</div>
+                    
+                    <div style="line-height: 2; margin-bottom: 1.5rem;">
+                        <p><strong>1. 상    호:</strong> 주식회사 에이코(AIKO)</p>
+                    </div>
+                    
+                    <div style="line-height: 2; margin-bottom: 1.5rem;">
+                        <p><strong>2. 설립일자:</strong> 2025년 8월 21일</p>
+                    </div>
+                    
+                    <div style="line-height: 2; margin-bottom: 1.5rem;">
+                        <p><strong>3. 본    점:</strong> 경기도 성남시 수정구 창업로 43 업무동 1층 60호</p>
+                    </div>
+                    
+                    <div style="line-height: 2; margin-bottom: 1.5rem;">
+                        <p><strong>4. 목    적:</strong></p>
+                        <div style="margin-left: 1rem;">
+                            <p>1) 인공지능 솔루션 개발 및 컨설팅</p>
+                            <p>2) 인공지능 및 프로그래밍 교육</p>
+                            <p>3) 인공지능 기반의 모바일 서비스 구축</p>
+                        </div>
+                    </div>
+                    
+                    <div style="line-height: 2; margin-bottom: 1.5rem;">
+                        <p><strong>5. 자 본 금:</strong> 금 1,000,000원 (일백만원)</p>
+                    </div>
+                    
+                    <div style="line-height: 2; margin-bottom: 1.5rem;">
+                        <p><strong>6. 발행주식:</strong> 보통주 10,000주 (1주당 액면가액 금 100원)</p>
+                    </div>
+                    
+                    <div style="line-height: 2; margin-bottom: 3rem;">
+                        <p><strong>7. 대 표 자:</strong> 김정훈</p>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 4rem;">
+                        <p style="margin-bottom: 1rem;"><strong>2025년 8월 21일</strong></p>
+                        <p style="margin-bottom: 0.5rem;"><strong>주식회사 에이코(AIKO)</strong></p>
+                        <p><strong>대표이사  김 정 훈</strong></p>
+                    </div>
+                `
+            },
+            '2': {
+                badge: 'general',
+                title: 'k-minton 업데이트',
+                date: '2025.09.01',
+                views: '87',
+                content: `
+                    <h3>k-minton 배드민턴 대진표 앱 완전 업그레이드!</h3>
+                    <p>안녕하세요, k-minton 팀입니다.</p>
+                    <p>
+                        배드민턴을 사랑하는 여러분을 위해 오랜 기간 개발해온 대진표 앱이 드디어 완전히 새로워졌습니다! 
+                        사용자 피드백을 바탕으로 처음부터 다시 설계한 이번 업데이트를 소개해드립니다.
+                    </p>
+                    
+                    <h3>🚀 주요 업그레이드 내용</h3>
+                    <ul>
+                        <li><strong>직관적인 새 UI/UX:</strong> 더욱 깔끔하고 사용하기 쉬운 인터페이스로 완전히 새단장</li>
+                        <li><strong>스마트 대진표 생성:</strong> 실력 기반 매칭으로 더욱 공정하고 재미있는 경기 구성</li>
+                        <li><strong>모바일 최적화:</strong> 스마트폰에서 더욱 편리하게 사용할 수 있도록 완전 최적화</li>
+                    </ul>
+                    
+                    <h3>📱 앱스토어에서 k-minton을 검색해 보세요</h3>
+                    <p>
+                        앱스토어와 구글플레이에서 다운로드 받으실 수 있습니다. 
+                        기존 사용자분들도 자동 업데이트를 통해 새로운 기능을 바로 이용하실 수 있습니다.
+                    </p>
+                    <p>
+                        여러분의 배드민턴 소모임이 더욱 즐겁고 체계적으로 운영될 수 있도록 최선을 다하겠습니다. 
+                        사용 중 궁금한 점이나 개선 사항이 있으시면 언제든 연락 주세요!
+                    </p>
+                    
+                    <p style="margin-top: 2rem; color: #666; font-style: italic;">
+                        🏆 함께 만들어가는 배드민턴 문화, k-minton과 함께하세요!
+                    </p>
+                `
+            }
+        };
+        
+        // 페이지 로드 시 공지사항 ID에 따라 내용 변경
+        if (noticeId && notices[noticeId]) {
+            const notice = notices[noticeId];
+            
+            document.getElementById('notice-badge').className = `notice-badge ${notice.badge}`;
+            document.getElementById('notice-badge').textContent = notice.badge === 'important' ? '중요' : '일반';
+            document.getElementById('notice-title').textContent = notice.title;
+            document.getElementById('notice-date').textContent = notice.date;
+            document.getElementById('notice-views').textContent = notice.views;
+            document.getElementById('notice-content').innerHTML = notice.content;
+        }
+    </script>
+</body>
+</html>
