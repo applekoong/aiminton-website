@@ -1,22 +1,7 @@
 {
   "permissions": {
     "allow": [
-      "Bash(lsof:*)",
-      "Bash(kill:*)",
-      "Bash(npx http-server:*)",
-      "Bash(python3:*)",
-      "Bash(open index.html)",
-      "Bash(ls:*)",
-      "Bash(git add:*)",
-      "Bash(git commit:*)",
-      "Bash(git remote add:*)",
-      "Bash(git push:*)",
-      "Bash(git remote set-url:*)",
-      "Bash(git config:*)",
-      "Bash(brew install:*)",
-      "Bash(gh repo sync:*)",
-      "Bash(gh auth:*)"
-    ],
-    "deny": []
+      "Bash(git add *)"
+    ]
   }
 }
